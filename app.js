@@ -105,7 +105,6 @@ born in the 1500's.
 
  
 let veryOldInventors = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600);
-console.log
 
 
 console.log('Exercise 1 my result: ', veryOldInventors);
@@ -302,6 +301,16 @@ let isAdultPresent = null;
 
 // Complete the exercise in the space below:
 
+isAdultPresent = devs.some(
+  function (val, i, arr) {
+    const yearOfBirth = val.year;
+    const currentYear = 2025;
+    let age = currentYear - yearOfBirth;
+    if (age => 18) 
+    return true;
+    else return false;
+  }
+);
 // Check your work:
 console.log('Exercise 6 my result: ', isAdultPresent);
 console.log('Exercise 6 correct result: ', true);
@@ -323,6 +332,17 @@ let isEveryone19OrOlder = null;
 
 // Complete the exercise in the space below:
 
+isEveryone19OrOlder = devs.every(
+  function(v,i,a) {
+  const yearOfBirth = v.year;
+  const currentYear = 2025;
+   let age = currentYear - yearOfBirth;
+    if (age >= 19) 
+    return true;
+    else return false;
+  }
+)
+
 // Check your work:
 console.log('Exercise 7 my result: ', isEveryone19OrOlder);
 console.log('Exercise 7 correct result: ', false);
@@ -340,6 +360,17 @@ let commentById = {};
 
 // Complete the exercise in the space below:
 
+et commentById = comments.find(function(comment) {
+  if (comment.id === 823423) {
+    return true;
+  } else {
+    return false;
+  }
+});
+    
+console.log('Exercise 8 my result: ', commentById);
+console.log('Exercise 8 correct result: ', { text: 'Super good', id: 823423 });
+
 // Check your work:
 console.log('Exercise 8 my result: ', commentById);
 console.log('Exercise 8 correct result: ', { text: 'Super good', id: 823423 });
@@ -356,7 +387,9 @@ of comment objects.
 let idx = null;
 
 // Complete the exercise in the space below:
-
+let idx = comments.findIndex
+  (comment => comment.id === 123523);
 // Check your work:
+
 console.log('Exercise 9 my result: ', idx);
 console.log('Exercise 9 correct result: ', 3);
